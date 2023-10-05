@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // Loop through each number in the array
+  for (let i = 0; i < array.length; i++) {
+    // Loop through each number in the array again
+    for (let j = 0; j < array.length; j++) {
+      // If the two numbers add up to the target number and they are not the same number, return true
+      if (array[i] + array[j] === target && i !== j) {
+        return true;
+      }
+    }
+  }
+  // If no pair of numbers adds up to the target number, return false
+  return false;
 }
 
 /* 
